@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/Untitled-1.png">
+    <style>
+        #home{
+            min-height: 620px;
+        }
+    </style>
+    <!-- Menyisipkan Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Menyisipkan Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/MyLogo.png" style="width: 35px;" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Social Media
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://www.instagram.com/arvandha121/" target="_blank">Instagram</a>
+                            <a class="dropdown-item" href="https://github.com/arvandha121" target="_blank">Github</a>
+                            <div class="dropdown-divider">Another action</div>
+                            <a class="dropdown-item" href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=nauvan121@gmail.com" target="_blank">Email</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Akhir Navbar -->
+
+        <!-- Jumbotron -->
+        <section id="home" class="jumbotron text-center bg-danger text-white mt-5">
+            <img src="img/nauvan.jpg" alt="Nauvan" width="200" class="rounded-circle img-thumbnail">
+            <h1 class="display-4 fw-bold">Arief Nauvan Ramadha</h1>
+            <p class="lead">Rebahaners | Beban Keluarga</p>
+            <p><span id="tanggalwaktu"></span></p>
+                <script>
+                    var tw = new Date();
+                    if (tw.getTimezoneOffset() == 0)(a = tw.getTime() + (7 * 60 * 60 * 1000))
+                    else(a = tw.getTime());
+                    tw.setTime(a);
+                    var tahun = tw.getFullYear();
+                    var hari = tw.getDay();
+                    var bulan = tw.getMonth();
+                    var tanggal = tw.getDate();
+                    var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+                    var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+                    document.getElementById("tanggalwaktu").innerHTML = hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " | " + ((tw.getHours() < 10) ? "0" : "") + tw.getHours() + ":" + ((tw.getMinutes() < 10) ? "0" : "") + tw.getMinutes() + (" WIB ");
+                </script>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 200"></svg>
+        </section>
+        <!-- Akhir Jumbotron -->
+
+        <!-- Projects -->
+        <section id="projects">
+            <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                <h2 id="MyProjects">My Projects</h2>
+                <br />
+                <br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <a href="#card1" style="text-decoration: none;">
+                        <div id="card1" class="card">
+                            <img src="img/projects/jay-zhang-1hODsNcJ7es-unsplash.jpg" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <a href="#card2" style="text-decoration: none;">
+                        <div id="card2" class="card">
+                            <img src="img/projects/bernin-uben-b20J7YbTK8w-unsplash.jpg" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <a href="#card3" style="text-decoration: none;">
+                        <div id="card3" class="card">
+                            <img src="img/projects/jay-zhang-ycZjz2Uw6VY-unsplash.jpg" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 200"></svg>
+        </section>
+        <!-- Akhir Projects -->
+
+        <!-- Footer -->
+        <footer id="footer" class="footer text-black text-center">
+            <p><b>©Copyright Information 2021</b></p>
+        </footer>
+        <!-- Akhir Footer -->
+    </div>
+</body>
+</html>
